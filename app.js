@@ -46,8 +46,8 @@ app.get('/require.html', function(req, res){
 app.get('/require-order.html', function(req, res){
   res.render("require-order.html");
 });
-app.get('/commonJS.html', function(req, res){
-  res.render("commonJS.html");
+app.get('/commonjs.html', function(req, res){
+  res.render("commonjs.html");
 });
 app.get('/yui3.html', function(req, res){
   res.render("yui3.html");
