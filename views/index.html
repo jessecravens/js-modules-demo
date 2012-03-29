@@ -40,194 +40,242 @@
           </a>
           <a class="brand" href="./index.html">Bootstrap</a>
           <div class="nav-collapse">
-            <ul class="nav">
-              <li class="active">
-                <a href="./index.html">Overview</a>
-              </li>
-              <li class="">
-                <a href="./scaffolding.html">Scaffolding</a>
-              </li>
-              <li class="">
-                <a href="./base-css.html">Base CSS</a>
-              </li>
-              <li class="">
-                <a href="./components.html">Components</a>
-              </li>
-              <li class="">
-                <a href="./javascript.html">Javascript plugins</a>
-              </li>
-              <li class="">
-                <a href="./less.html">Using LESS</a>
-              </li>
-              <li class="divider-vertical"></li>
-              <li class="">
-                <a href="./download.html">Customize</a>
-              </li>
-              <li class="">
-                <a href="./examples.html">Examples</a>
-              </li>
-            </ul>
+	            <ul class="nav">
+	              <li class="">
+	                <a href="./require.html">RequireJS and JQuery</a>
+	              </li>
+	              <li class="">
+	                <a href="./require-order.html">RequireJS, AMD, Order</a>
+	              </li>
+	              <li class="">
+	                <a href="./commonjs.html">CommonJS</a>
+	              </li>
+	              <li class="">
+	                <a href="./yui3.html">YUI3</a>
+	              </li>
+	              <li class="">
+	                <a href="./harmony.html">Harmony</a>
+	              </li>
+	            </ul>
           </div>
         </div>
       </div>
     </div>
 
+	
     <div class="container">
 
-<!-- Masthead
-================================================== -->
-<header class="jumbotron masthead">
-  <div class="inner">
-    <h1>Bootstrap, from Twitter</h1>
-    <p>Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.</p>
-    <p class="download-info">
-      <a href="https://github.com/twitter/bootstrap/" class="btn btn-primary btn-large">View project on GitHub</a>
-      <a href="assets/bootstrap.zip" class="btn btn-large">Download Bootstrap <small>(v2.0.2)</small></a>
-    </p>
-  </div>
+		<!-- Masthead
+		================================================== -->
+		<header class="jumbotron subhead" id="overview">
+		  <h1>TechX 2012 - JavaScript Modules</h1>
+		  <p class="lead">Demonstration of JavaScript Script Loaders, Module Definitions, and Dependency Management</p>
+		</header>
 
-  <div class="bs-links">
-    <ul class="quick-links">
-      <li><a href="./upgrading.html">Upgrading from 1.4</a></li>
-      <li><a href="https://github.com/twitter/bootstrap/zipball/master">Download with docs</a></li>
-      <li><a href="https://github.com/twitter/bootstrap/issues?state=open">Submit issues</a></li>
-      <li><a href="https://github.com/twitter/bootstrap/wiki">Roadmap and changelog</a></li>
-    </ul>
-    <ul class="quick-links">
-      <li>
-        <iframe class="github-btn" src="http://markdotto.github.com/github-buttons/github-btn.html?user=twitter&repo=bootstrap&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="112px" height="20px"></iframe>
-      </li>
-      <li>
-        <iframe class="github-btn" src="http://markdotto.github.com/github-buttons/github-btn.html?user=twitter&repo=bootstrap&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="98px" height="20px"></iframe>
-      </li>
-      <li class="follow-btn">
-        <a href="https://twitter.com/twbootstrap" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @twbootstrap</a>
-      </li>
-      <li class="tweet-btn">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://twitter.github.com/bootstrap/" data-count="horizontal" data-via="twbootstrap" data-related="mdo:Creator of Twitter Bootstrap">Tweet</a>
-      </li>
-    </ul>
-  </div>
-</header>
 
-<hr class="soften">
+				<h2>Introduction</h2>
+					<h3>The Goal</h3>
+				<ul>
+				<li>Load modules as fast as possible, even out of order.</li>
+				<li>Evaluate modules in the correct dependency order.</li>
+			    <li>Do not use global variables, so it is possible to load multiple versions of a module in a page.</li>
+			</ul>
+					<h3>Asynchronous Loading</h3>
+					
+									
+			  			<script src="https://gist.github.com/1991043.js?file=async-require-example.js"></script>
+					<h3>AMD Define</h3>				
+				  		<script src="https://gist.github.com/1991043.js?file=function-wrapping.js"></script>
+				
 
-<div class="marketing">
-  <h1>Designed for everyone, everywhere.</h1>
-  <p class="marketing-byline">Need reasons to love Bootstrap? Look no further.</p>
-  <div class="row">
-    <div class="span4">
-      <img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">
-      <h2>Built for and by nerds</h2>
-      <p>Like you, we love building awesome products on the web. We love it so much, we decided to help people just like us do it easier, better, and faster. Bootstrap is built for you.</p>
-    </div>
-    <div class="span4">
-      <img class="bs-icon" src="assets/img/glyphicons/glyphicons_079_podium.png">
-      <h2>For all skill levels</h2>
-      <p>Bootstrap is designed to help people of all skill levels&mdash;designer or developer, huge nerd or early beginner. Use it as a complete kit or use to start something more complex.</p>
-    </div>
-    <div class="span4">
-      <img class="bs-icon" src="assets/img/glyphicons/glyphicons_163_iphone.png">
-      <h2>Cross-everything</h2>
-      <p>Originally built with only modern browsers in mind, Bootstrap has evolved to include support for all major browsers (even IE7!) and, with Bootstrap 2, tablets and smartphones, too.</p>
-    </div>
-  </div><!--/row-->
-  <div class="row">
-    <div class="span4">
-      <img class="bs-icon" src="assets/img/glyphicons/glyphicons_155_show_thumbnails.png">
-      <h2>12-column grid</h2>
-      <p>Grid systems aren't everything, but having a durable and flexible one at the core of your work can make development much simpler. Use our built-in grid classes or roll your own.</p>
-    </div>
-    <div class="span4">
-      <img class="bs-icon" src="assets/img/glyphicons/glyphicons_214_resize_small.png">
-      <h2>Responsive design</h2>
-      <p>With Bootstrap 2, we've gone fully responsive. Our components are scaled according to a range of resolutions and devices to provide a consistent experience, no matter what.</p>
-    </div>
-    <div class="span4">
-      <img class="bs-icon" src="assets/img/glyphicons/glyphicons_266_book_open.png">
-      <h2>Styleguide docs</h2>
-      <p>Unlike other front-end toolkits, Bootstrap was designed first and foremost as a styleguide to document not only our features, but best practices and living, coded examples.</p>
-    </div>
-  </div><!--/row-->
-  <div class="row">
-    <div class="span4">
-      <img class="bs-icon" src="assets/img/glyphicons/glyphicons_082_roundabout.png">
-      <h2>Growing library</h2>
-      <p>Despite being only 10kb (gzipped), Bootstrap is one of the most complete front-end toolkits out there with dozens of fully functional components ready to be put to use.</p>
-    </div>
-    <div class="span4">
-      <img class="bs-icon" src="assets/img/glyphicons/glyphicons_009_magic.png">
-      <h2>Custom jQuery plugins</h2>
-      <p>What good is an awesome design component without easy-to-use, proper, and extensible interactions? With Bootstrap, you get custom-built jQuery plugins to bring your projects to life.</p>
-    </div>
-    <div class="span4">
-      <img class="bs-icon" src="assets/img/less-small.png">
-      <h2>Built on LESS</h2>
-      <p>Where vanilla CSS falters, LESS excels. Variables, nesting, operations, and mixins in LESS makes coding CSS faster and more efficient with minimal overhead.</p>
-    </div>
-  </div><!--/row-->
-  <div class="row">
-    <div class="span3">
-      <img class="small-bs-icon" src="assets/img/icon-html5.png">
-      <h3>HTML5</h3>
-      <p>Built to support new HTML5 elements and syntax.</p>
-    </div>
-    <div class="span3">
-      <img class="small-bs-icon" src="assets/img/icon-css3.png">
-      <h3>CSS3</h3>
-      <p>Progressively enhanced components for ultimate style.</p>
-    </div>
-    <div class="span3">
-      <img class="small-bs-icon" src="assets/img/icon-github.png">
-      <h3>Open-source</h3>
-      <p>Built for and maintained by the community via <a href="https://github.com">GitHub</a>.</p>
-    </div>
-    <div class="span3">
-      <img class="small-bs-icon" src="assets/img/icon-twitter.png">
-      <h3>Made at Twitter</h3>
-      <p>Brought to you by an experienced <a href="http://twitter.com/fat">engineer</a> and <a href="http://twitter.com/mdo">designer</a>.</p>
-    </div>
-  </div><!--/row-->
+			
+			
+			<div class="row">
+		    <div class="span6">
+		  		<h2>Script Loaders</h2>
+		        <ul class="">
+	              <li>RequireJS</li>
+	              <li>yepnope</li>	            
+		          <li>YUI3</li>
+			      <li>curl.js</li>
+				  <li>LABjs</li>
+				  <li>LazyLoad</li>
+				  <li>HeadJS</li>
+				  <li>LazyLoad</li>
+				  <li>StealJS</li>
+				  <li>ControlJS</li>								
+				  <li>StealJS</li>
+				  <li>PINF JS Loader</li>
+				  <li>JSLoad</li>
+				  <li>JsDefer</li>
+				  <li>JSL</li>
+				  <li>load.js</li>															
+				</ul>
+		    </div>
+		
+		
+<!-- 		
+			HeadJS
+			Head JS loads scripts in parallel no matter how many of them and what the browser is. Load scripts like images. Use HTML5 and CSS3 safely. Target CSS for different screens, paths, states and browsers. Make it the only script in your HEAD.
+			Author: Tero Piirainen
+			Project URL: Here
+			Size: 6.3 KB
+			Related links:
+			HeadJS theory
+			HeadJS TEST
+			LabJS
+			LABjs (Loading And Blocking JavaScript) is an all-purpose, on-demand JavaScript loader, capable of loading any JavaScript resource, from any location, into any page, at any time. You can easily specify which scripts have execution order dependencies and LABjs will ensure proper execution order. This makes LABjs safe to use for virtually any JavaScript resource, whether you control/host it or not, and whether it is standalone or part of a larger dependency tree of resources.
+			Author: Kyle Simpson
+			Project URL: Here
+			Size: 4.7 KB
+			Related links:
+			Github repo
+			Ajaxian article
+			RequireJS
+			RequireJS is a JavaScript file and module loader. It is optimized for in-browser use, but it can be used in other JavaScript environments, like Rhino and Node. Using a modular script loader like RequireJS will improve the speed and quality of your code.
+			Author: James Burke
+			Project URL: Here
+			Size: 13 KB
+			Related links:
+			Using with jQuery
+			Github
+			ControlJS
+			ControlJS is a JavaScript module that handles both inline scripts and external scripts, delays script execution until after the page has rendered, allows for scripts to be downloaded, not executed and integrates with simple changes to HTML and no code changes
+			Author: Steve Souders
+			Project URL: Here
+			Size: 3.6 KB
+			Related links:
+			Howto guide
+			Example menu
+			StealJS
+			The StealJS project is a collection of command and client based JavaScript utilities that make building, packaging, sharing and consuming JavaScript applications easy. Includes modules for dependency management, JS compression, cleaning and logging.
+			Author: Brian Moschel
+			Project URL: Here
+			Size: 11.4 KB
+			Related links:
+			Official forum
+			JavaScript MVC Google Group
+			yepnope
+			yepnope is an asynchronous conditional resource loader that’s super-fast, and allows you to load only the scripts that your users need. It works with both JavaScript and CSS and has a full test suite in QUnit that you can run in your set of supported browsers to make sure it works.
+			Author: Alex Sexton and Ralph Holzmann
+			Project URL: Here
+			Size: 3.4 KB
+			Related links:
+			Introduction to yepnope
+			Github repo
+			PINF JS Loader
+			The loader allows for bootstrapping a consistent and state-of-the-art CommonJS environment for any supported platform (on server & in browser) and thus is ideally suited to be used as the target for the commonjs command and the development of cross-platform JavaScript applications and libraries.
+			Author: Christoph Dorn
+			Project URL: Here
+			Size: 22 KB
+			Related links:
+			Presentation with Slides
+			Introduction to PINF
+			JSLoad
+			JSLoad is a Javascript file loader that we wrote for Instructables. You give it a set of dependencies and groupings, and it loads the files you need, when your executing code needs them. The real usefulness of JSLoad comes with its ability to group dependencies using tags.
 
-  <hr class="soften">
 
-  <h1>Built with Bootstrap.</h1>
-  <p class="marketing-byline">For even more sites built with Bootstrap, <a href="http://builtwithbootstrap.tumblr.com/" target="_blank">visit the unofficial Tumblr</a> or <a href="./examples.html">browse the examples</a>.</p>
-  <ul class="thumbnails example-sites">
-    <li class="span3">
-      <a class="thumbnail" href="http://soundready.fm/" target="_blank">
-        <img src="assets/img/example-sites/soundready.png" alt="SoundReady.fm">
-      </a>
-    </li>
-    <li class="span3">
-      <a class="thumbnail" href="http://kippt.com/" target="_blank">
-        <img src="assets/img/example-sites/kippt.png" alt="Kippt">
-      </a>
-    </li>
-    <li class="span3">
-      <a class="thumbnail" href="http://www.fleetio.com/" target="_blank">
-        <img src="assets/img/example-sites/fleetio.png" alt="Fleetio">
-      </a>
-    </li>
-    <li class="span3">
-      <a class="thumbnail" href="http://www.jshint.com/" target="_blank">
-        <img src="assets/img/example-sites/jshint.png" alt="JS Hint">
-      </a>
-    </li>
-  </ul>
+			Author: Eric Nguyen
+			Project URL: Here
+			Size: 9.8 KB
+			Related links:
+			JSLoad @ Mindtangle
+			JSLoad @ Instructables
+			JsDefer
+			JsDefer features parallel/serial loading based on definitions, dependency, and wrapped versus unwrapped, and whether dependencies are defined in separate def file or in script itself and integration with Deferred (as in jQuery 1.5) enables or simplifies many use-case scenarios among many others.
+			Author: Boris Moore
+			Project URL: Here
+			Size: 4.7 KB
+			Related links:
+			Demo app
+			Some advanced examples
+			JSL (JavaScript Loader)
+			JSL features on-demand loading, is browser cacheable, dynamic asynchronous JavaScript loading, lazy loading and duplicate source prevention among a ton of other features.
+			Author: Andres Vidal
+			Project URL: Here
+			Size: 2.1 KB
+			Related links:
+			How to load JSL
+			A simple example
+			YUI 3 Get
+			The Get Utility provides a mechanism for attaching script and css resources — including cross-domain resources — to the DOM after the page has loaded.
+			Author: Adam Moore
+			Project URL: Here
+			Size: 17.9 KB
+			Related links:
+			API Documentation
+			Demos
+			DominateJS
+			DominateJS allows you to asynchronously load all your JavaScript, and defer sequential execution until the page loads. DominateJS aims to be a cross-browser and 100% document.write-safe library! This is a heavily modified (and powerful!) evolution of ControlJS.
+			Author: Chris Joel & Jason Benterou
+			Project URL: Here
+			Size: 48 KB
+			Load.js
+			load.js is a micro JS lazy-loader. Built on top of chain.js, it allows you to lazy load your JS scripts sequentially or in parallel and handle complex dependency chains.
+			Author: Chris O’Hara
+			Project URL: Here
+			Size: 2 KB
+			Related links:
+			Chain.JS – Dependency
+			Coverage at DailyJS
+			BravoJS
+			BravoJS is an implementation of a proposed draft for CommonJS Modules/2.0
+			Author: Wes Garland
+			Project URL: Here
+			Size: 10.7 KB
+			Bootstrap
+			Bootstrap is a small library for dynamically loading JavaScript files.
+			It’s primary use case is for using in your JS code to load JS files only when they are used.
+			Author: Scott Koon
+			Project URL: Here
+			Size: 1.3 KB
+			LazyLoad
+			LazyLoad is a tiny (only 904 bytes minified and gzipped), dependency-free JavaScript utility that makes it super easy to load external JavaScript and CSS files on demand.
+			Whenever possible, LazyLoad will automatically load resources in parallel while ensuring execution order when you specify an array of URLs to load. In browsers that don’t preserve the execution order of asynchronously-loaded scripts, LazyLoad will safely load the scripts sequentially.
+			Author: Ryan Grove
+			Project URL: Here
+			Size: 1.6 KB
+			curl.js
+			curl.js is a small, but very fast AMD-compliant asynchronous loader. Current size: 4.5KB (2.1KB gzipped) using Google’s Closure Compiler.
+			If you’d like to use curl.js for non-AMD modules (ordinary javascript files), you’ll want to use the version with the js! plugin built in. You may also want to build-in the domReady module. The combined curl+js+domReady loader is still only 6.1KB (2.7KB gzipped).
+			Author: John Hann
+			Project URL: Here
+			Size: 5 KB
+			$script.js
+			$script.js is an asynchronous JavaScript loader and dependency manager with an astonishingly impressive lightweight footprint. Like many other script loaders, $script.js allows you to load script resources on-demand from any URL and not block other resources from loading, like CSS and images.
+			Author: Dustin Diaz
+			Project URL: Here
+			Size: 1.4 KB
+			NBL.js
+			NBL.js is a tiny script that will make your HTML pages load faster by loading all your JavaScript files asynchronously (in parallel) with the rest of your page. Normally if you include two or three scripts in your page, the browser will wait for them to be executed before your page is shown.
+			Author: Berklee
+			Project URL: Here
+			Size: 971 B
+			Related links:
+			Examples
+			Github repo
+		 -->
+		
 
-</div><!-- /.marketing -->
+		    <div class="span6">
+				<h2>Module Definitions</h2>
+		        <ul class="">
+	              <li>AMD</li>
+	              <li>CommonJS</li>	            
+		          <li>YUI3</li>
+				</ul>
+			</div>
+		  </div>
+
 
      <!-- Footer
       ================================================== -->
       <footer class="footer">
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
-        <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-        <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Designed and built for techX 2012.</p>
       </footer>
-
     </div><!-- /container -->
+
 
 
 
