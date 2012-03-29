@@ -52,6 +52,9 @@ app.get('/commonjs.html', function(req, res){
 app.get('/yui3.html', function(req, res){
   res.render("yui3.html");
 });
+app.get('/yepnope.html', function(req, res){
+  res.render("yepnope.html");
+});
 app.get('/harmony.html', function(req, res){
   res.render("harmony.html");
 });
