@@ -1,0 +1,1 @@
+console.log('yui 3 my-module loaded')

@@ -30,7 +30,7 @@
   </head>
 
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
-	<a href="https://github.com/jessecravens/js-modules-techx"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>	
+	<a href="https://github.com/jessecravens/js-modules-techx"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>	
 	  <!-- Navbar
 	    ================================================== -->
 	    <div class="navbar navbar-fixed-top">
@@ -74,9 +74,23 @@
 		  <p class="lead">JavaScript Module Harmony Demo</p>
 		</header>
 		
+		<h2>Overview</h2>
 		
-		<p>More to come....</p>
+		<p>The <a href="http://tools.google.com/dlpage/chromesxs">latest Canary build of Google Chrome</a> allows you to unlock some new features from ECMAScript Harmony. However, they are disabled by default, so to enable them you have to type about:flags into your address bar, and turn on “Enable Experimental JavaScript” which is found right at the bottom of the page.</p>
 
+
+		<img src="assets/img/javascript-harmony-chrome.png" width="548" height="511" alt="Javascript Harmony Chrome">
+		
+		<h2>Syntax</h2>
+		<h3>Simple Module</h3>
+		<script src="https://gist.github.com/2240458.js?file=simple.js"></script>
+		
+		<h3>Dynamic Module Loading</h3>
+		<script src="https://gist.github.com/2240458.js?file=dynamic.js"></script>
+		
+		<h3>Remote Module Load</h3>
+		<script src="https://gist.github.com/2240458.js?file=harmony-remote.js"></script>
+		
 		  <!-- <div class="row">
 			
 		    <div id="load" class="span6">

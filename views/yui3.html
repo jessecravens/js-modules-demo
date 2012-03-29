@@ -26,11 +26,60 @@
 
 	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
 	<script data-main="javascripts/main-order" src="javascripts/require-jquery.js"></script>
+	
+	<script src="http://yui.yahooapis.com/3.4.1/build/yui/yui-min.js"></script>
+
+	<script>
+	
+		YUI.add('my-module', function (Y) {
+		   // Write your module code here, and make your module available on the Y
+		   // object if desired.
+		   Y.MyModule = {
+		       logLoaded: function () {
+		           console.log('yui3 my-module loaded!');
+		       }
+		   }, 
+		   '0.0.1', {
+		    requires: ['node', 'event']
+		   }
+		});
+		
+		YUI().use('my-module', function (Y) {
+		    // The Y instance here is the same Y instance that was passed into
+		    // my-module's add() callback, so the Y.MyModule object that was created
+		    // there is now available here as well.
+		    Y.MyModule.logLoaded();
+		});
+		
+		YUI({
+		    modules: { 
+				'my-remote-module': {
+					fullpath: "javascripts/my-remote-module.js"
+				}
+				
+			}
+		// 3.x node will be dynamically loaded so we can work with DOM elements
+		}).use('my-remote-module', function(Y, result) {
+
+		    // The callback supplied to use() will be executed regardless of
+		    // whether the operation was successful or not.  The second parameter
+		    // is a result object that has the status of the operation.  We can
+		    // use this to try to recover from failures or timeouts.
+		
+		    if (!result.success) {
+		        Y.log('Load failure: ' + result.msg, 'warn', 'Example');
+		    } else {
+				MyRemoteModule.logLoaded();
+		    }
+		});
+		
+		
+	</script>
 
   </head>
 
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
-	<a href="https://github.com/jessecravens/js-modules-techx"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>	
+	<a href="https://github.com/jessecravens/js-modules-techx"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>	
 	  <!-- Navbar
 	    ================================================== -->
 	    <div class="navbar navbar-fixed-top">
@@ -74,7 +123,18 @@
 		  <p class="lead">YUI3 Module Demo</p>
 		</header>
 		
-
+		<h3>Index Page - Basic setup</h3>
+		<script src="https://gist.github.com/2238250.js?file=index.html"></script>
+		
+		<h3>Inline Module</h3>
+		<script src="https://gist.github.com/2238250.js?file=yui3-main.js"></script>
+		
+		<h3>Remote Module Definition</h3>
+		<script src="https://gist.github.com/2238250.js?file=my-remote-module.js"></script>
+		
+		<h3>Remote Module Load</h3>
+		<script src="https://gist.github.com/2238250.js?file=yui3-main-remote.js"></script>
+		
 		  <!-- <div class="row">
 			
 		    <div id="load" class="span6">
@@ -85,7 +145,6 @@
 			</div>
 			
 		  </div> -->
-
 
      <!-- Footer
       ================================================== -->
